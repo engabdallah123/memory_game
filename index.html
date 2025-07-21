@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="start-game">
+        <button>Start Game</button>
+        <p class="note">Notice, You Only Have 15 Tries</p>
+    </div>
+    <div class="info">
+        <div class="name">
+            Hello: <span></span>
+        </div>
+        <div class="timer">
+            <span class="minutes">00</span>:<span  class="seconds">00</span>
+        </div>
+        <div class="tries">
+            Wrong Tries: <span>0</span>
+        </div>
+    </div>
+
+    <div class="game-continer">
+        <div class="card" data-animals="elephant">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/elephant.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="elephant">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/elephant.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="giraffe">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/giraffe.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="giraffe">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/giraffe.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="kangaroo">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/kangaroo.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="kangaroo">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/kangaroo.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="koala">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/koala.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="koala">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/koala.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="lion">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/lion.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="lion">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/lion.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="monkey">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/monkey.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="monkey">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/monkey.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="parrot">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/parrot.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="parrot">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/parrot.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="peacock">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/peacock.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="peacock">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/peacock.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="penguin">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/penguin.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="penguin">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/penguin.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="turtle">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/turtle.png" alt="">
+            </div>
+        </div>
+        <div class="card" data-animals="turtle">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./Images/turtle.png" alt="">
+            </div>
+        </div>
+    </div>
+
+        <audio id="applay" src="./sounds/applepay.mp3" preload="auto"></audio>
+        <audio id="fail" src="./sounds/fail.mp3" preload="auto"></audio>
+        <audio id="sucess" src="./sounds/sucess-all.mp3" preload="auto"></audio>
+        <audio id="game-over" src="./sounds/fail-all.mp3" preload="auto"></audio>
+        <audio id="start" src="./sounds/apt-game-start_CHpU5qX.mp3" preload="auto"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.start-game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 169, 244, 0.9);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.start-game button {  
+    color: white;
+    background-color: #f44336;
+    padding: 15px 20px;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+.start-game p {
+  color: white;
+  font-size: 55px;  
+  margin-top: 0;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 1078px;
+    margin: 20px auto 0;
+    padding: 20px;
+    font-size: 27px;
+    overflow: hidden;
+    border: 2px solid #2196f3;
+    background-color: #f6f6f6;
+}
+.info .timer .minutes {
+    margin-right: 3px;
+}
+.info .timer .seconds {
+    margin-left: 3px;
+}
+.info .timer span {
+    color:#f44336;
+}
+.info .name {
+ flex: 1;
+}
+.info .tries {
+ flex: 1;
+ text-align: right;
+}
+.game-continer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: 20px auto;
+    &.stop-click {
+        pointer-events: none;
+    }
+}
+.game-continer .card {
+    height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    margin: 0 10px 20px;
+    flex: 1 0 200px;
+    position: relative;
+    cursor: pointer;
+}
+.game-continer .card.flipped,
+.game-continer .card.match {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.game-continer .card .face {
+ position: absolute;
+ text-align: center;
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+ border: 5px solid #2196f3;
+}
+.game-continer .card .front {
+ background-color: #333;
+ line-height: 200px;
+}
+.game-continer .card .front::before {
+    content: "?";
+    font-size: 140px;
+    font-weight: bold;
+    color: #fff;
+}
+.game-continer .card .back {
+ background-color: #607d8b;
+ transform: rotateY(180deg);
+}
+.game-continer .card .face.back img {
+ width: 140px;
+ margin-top: 30px;
+}
+.pop-fail {
+    position: fixed;
+    top: 31%;
+    background-color: #ff0f0fd9;
+    color: white;
+    padding: 50px 100px;
+    width: 100%;
+    height: 437px;
+    text-align: center;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     flex-direction: column;
+    gap: 34px;
+}
+.pop-fail span {
+    font-size: 90px;
+    font-weight: bold;
+}
+.pop-fail button {
+    border: none;
+    padding: 17px 30px;
+    font-size: 31px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.pop-sucss {
+    position: fixed;
+    top: 31%;
+    background-color: #008000e0;
+    color: white;
+    padding: 50px 100px;
+    width: 100%;
+    height: 437px;
+    text-align: center;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 34px;
+}
+.pop-sucss span {
+    font-size: 83px;
+    font-weight: bold;
+}
+.pop-sucss button {
+    border: none;
+    padding: 17px 30px;
+    font-size: 31px;
+    border-radius: 12px;
+    cursor: pointer;
+}
