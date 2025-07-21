@@ -1,7 +1,8 @@
 // start game
 let buttom = document.querySelector(".start-game button");
 let counter;
-let tries = 0;
+let tries = 12;
+document.querySelector(".note span").innerHTML = tries;
 document.querySelector(".tries span").innerHTML = tries;
 buttom.onclick = function () {
   let yourName = prompt("What's Your Name?");
@@ -15,7 +16,7 @@ buttom.onclick = function () {
   document.getElementById("start").play();
 
   // timer
-  let countDownTime = 3 * 60 + 59; // by seconds
+  let countDownTime = 1 * 60 + 59; // by seconds
   counter = setInterval(() => {
     let minutes = Math.floor(countDownTime / 60);
     let seconds = countDownTime % 60;
@@ -83,7 +84,7 @@ function isMatching(firstCard, secondCard) {
     // if all is matched
     youWin();
   } else {
-    tries++;
+    tries--;
     document.querySelector(".tries span").innerHTML = tries;
     setTimeout(() => {
       firstCard.classList.remove("flipped");
@@ -92,7 +93,7 @@ function isMatching(firstCard, secondCard) {
     document.getElementById("fail").play();
     
     // if you have limited tries
-    if (tries === 15) {
+    if (tries === 0) {
       document.getElementById("game-over").play();
       let div = document.createElement("div");
       div.className = "pop-fail";
